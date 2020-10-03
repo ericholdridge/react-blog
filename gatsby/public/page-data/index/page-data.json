@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-index-js","path":"/","result":{"pageContext":{}},"staticQueryHashes":[]}
+{"componentChunkName":"component---src-pages-index-js","path":"/","result":{"data":{"blogs":{"nodes":[{"title":"First blog","blogTitle":"My first blog"},{"title":"Second Blog","blogTitle":"This is the second blog"}]}},"pageContext":{}},"staticQueryHashes":[]}
