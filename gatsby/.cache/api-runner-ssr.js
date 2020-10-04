@@ -3,7 +3,7 @@ var plugins = [{
       options: {"plugins":[]},
     },{
       plugin: require('/Users/ericholdridge/Documents/Projects/react-blog/gatsby/node_modules/gatsby-source-sanity/gatsby-ssr'),
-      options: {"plugins":[],"projectId":"ml1gb46a","dataset":"production","watchMode":true},
+      options: {"plugins":[],"projectId":"ml1gb46a","dataset":"production","watchMode":true,"token":"skg0H6E79UilqZBsuXGdvgyq3y6EXuO4MBiItp5NChIKCAgKG8pICgmxjWAtMaF6Csn7oBvAJmdcG2nThsv6SXHp1LIxHIGaoi3crMKHlELnW1OoCwvAlGKkymsxN2pYgeJ566fzlsVa1a4DMnzyNaU4h1MicxLztOa0p19391U42WtvjkOt"},
     },{
       plugin: require('/Users/ericholdridge/Documents/Projects/react-blog/gatsby/gatsby-ssr'),
       options: {"plugins":[]},

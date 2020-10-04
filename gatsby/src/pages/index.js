@@ -1,32 +1,40 @@
 import { graphql } from 'gatsby';
 import React from 'react';
+import Img from 'gatsby-image';
 import Container from '../components/Container/Container';
 
 export default function HomePage({ data }) {
-  const blogs = data.blogs.nodes;
-  console.log(blogs);
+  const blogImage = data.allSanityBlog.nodes[0];
+  const imgAltText = data.allSanityBlog.nodes[0].imgAlt;
   return (
-    <>
+    <section>
       <Container>
-        <p>
-          {blogs.map((blog) => (
-            <div>
-              <h2>{blog.title}</h2>
-              <p>{blog.blogTitle}</p>
-            </div>
-          ))}
-        </p>
+        <div>
+          <Img fixed={blogImage.poster.asset.fixed} alt={imgAltText} />
+        </div>
       </Container>
-    </>
+    </section>
   );
 }
-console.clear();
+
 export const query = graphql`
   query {
-    blogs: allSanityBlog {
+    allSanityBlog {
       nodes {
         title
-        blogTitle
+        text {
+          children {
+            text
+          }
+        }
+        imgAlt
+        poster {
+          asset {
+            fixed(width: 1200, height: 500) {
+              ...GatsbySanityImageFixed
+            }
+          }
+        }
       }
     }
   }

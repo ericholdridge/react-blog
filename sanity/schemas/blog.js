@@ -4,24 +4,29 @@ export default {
   type: 'document',
   fields: [
     {
+      title: 'Title',
       name: 'title',
-      title: 'Blog title',
-      type: 'string',
-      required: true,
+      type: 'string'
     },
     {
-      name: 'blogTitle',
-      title: 'Blog title',
-      type: 'string',
-      required: true,
+      title: 'Text', 
+      name: 'text',
+      type: 'array', 
+      of: [{type: 'block'}]
     },
     {
-      name: 'image',
-      title: 'Blog Image',
+      title: 'Poster',
+      name: 'poster',
       type: 'image',
       options: {
-        hotspot: true
-      },
+        hotspot: true // <-- Defaults to false
+      }
+    },
+    {
+      title: 'Alternative text',
+      name: 'imgAlt',
+      type: 'string',
+      description: 'Import for SEO and accessibility'
     }
   ]
 }
