@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "react-blog"
+    "name": "blog"
   },
   "api": {
-    "projectId": "ml1gb46a",
+    "projectId": "63xqn5e2",
     "dataset": "production"
   },
   "plugins": [
