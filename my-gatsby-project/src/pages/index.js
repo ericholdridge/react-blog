@@ -1,25 +1,24 @@
-import { useStaticQuery, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 import React from "react"
+
 import Container from "../components/Container"
 import Header from "../components/header"
+import GlobalStyle from "../GlobalStyles/globalStyles"
+import Blog from "../components/Blog"
 
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allSanityPost {
-        nodes {
-          title
-        }
-      }
-    }
-  `)
   return (
     <>
+      <GlobalStyle />
+      <Helmet>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+          rel="stylesheet"
+        />
+      </Helmet>
       <Header />
       <Container>
-        {data.allSanityPost.nodes.map(blog => {
-          return <h1>{blog.title}</h1>
-        })}
+        <Blog />
       </Container>
     </>
   )
