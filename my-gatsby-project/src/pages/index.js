@@ -5,6 +5,7 @@ import Container from "../components/Container"
 import Header from "../components/header"
 import GlobalStyle from "../GlobalStyles/globalStyles"
 import Blog from "../components/Blog"
+import Hero from "../components/Hero"
 
 const IndexPage = () => {
   return (
@@ -17,6 +18,7 @@ const IndexPage = () => {
         />
       </Helmet>
       <Header />
+        <Hero />
       <Container>
         <Blog />
       </Container>

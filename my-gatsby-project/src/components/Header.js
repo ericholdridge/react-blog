@@ -7,18 +7,12 @@ const Header = () => {
   return (
     <NavStyled>
       <Container>
+        <div className="nav-logo">
+          <h1>eholdridge</h1>
+        </div>
         <ul>
           <li>
             <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/blog">Blog</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </Container>
@@ -30,17 +24,24 @@ const NavStyled = styled.nav`
   width: 100%;
   padding: 20px 0;
   background: black;
-  ul {
+  .container {
     display: flex;
-    list-style: none;
-    padding: 0;
-    li {
-      a {
-        text-decoration: none;
-        margin: 0 10px;
-        color: white;
-        &:last-child() {
-          margin-right: 0;
+    justify-content: space-between;
+    .nav-logo {
+      color: white;
+    }
+    ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      li {
+        a {
+          text-decoration: none;
+          margin: 0 10px;
+          color: white;
+          &:last-child() {
+            margin-right: 0;
+          }
         }
       }
     }
