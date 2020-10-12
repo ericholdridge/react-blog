@@ -8,7 +8,8 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
   body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Crimson Pro', serif;
+    font-family: 'Poppins', sans-serif;
   }
 `
 

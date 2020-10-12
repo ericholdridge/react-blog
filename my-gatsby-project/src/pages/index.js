@@ -1,27 +1,23 @@
 import { Helmet } from "react-helmet"
 import React from "react"
-
-import Container from "../components/Container"
-import Header from "../components/header"
 import GlobalStyle from "../GlobalStyles/globalStyles"
-import Blog from "../components/Blog"
+
 import Hero from "../components/Hero"
+import Recommended from "../components/Recommended"
 
 const IndexPage = () => {
   return (
     <>
       <GlobalStyle />
       <Helmet>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
-          rel="stylesheet"
-        />
+      <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200;300;500&family=Poppins:wght@100;300;400;500&display=swap" rel="stylesheet" />
+        <script
+          src="https://kit.fontawesome.com/9808de19ba.js"
+          crossorigin="anonymous"
+        ></script>
       </Helmet>
-      <Header />
-        <Hero />
-      <Container>
-        <Blog />
-      </Container>
+      <Hero />
+      <Recommended />
     </>
   )
 }
