@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import styled from "styled-components";
 
-const Image = () => {
+const HeroImage = () => {
   return (
     <StaticQuery
       query={graphql`
@@ -12,7 +12,7 @@ const Image = () => {
             nodes {
               heroImage {
                 asset {
-                  fluid {
+                  fluid(maxHeight: 200) {
                     ...GatsbySanityImageFluid
                   }
                 }
@@ -36,4 +36,4 @@ const StyledImage = styled.div`
   width: 100%;
 `;
 
-export default Image;
+export default HeroImage;

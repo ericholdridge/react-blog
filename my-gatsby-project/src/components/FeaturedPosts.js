@@ -53,15 +53,16 @@ const FeaturedPosts = () => {
 
 const StyledPosts = styled.section`
   width: 100%;
-  padding: 100px 0 200px 0;
+  padding: 100px 0;
   .container {
     .posts {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      margin: 60px 0 0 0;
+      margin: 30px 0 0 0;
       .postsCard {
         width: 370px;
+        margin: 40px 0 0 0;
         img {
           width: 100%;
           display: block;
