@@ -5,6 +5,7 @@ import GlobalStyle from "../GlobalStyles/globalStyles"
 import Hero from "../components/Hero"
 import Recommended from "../components/Recommended"
 import Minimalism from "../components/Minimalism"
+import AboutUs from "../components/AboutUs"
 
 const IndexPage = () => {
   return (
@@ -20,6 +21,7 @@ const IndexPage = () => {
       <Hero />
       <Recommended />
       <Minimalism />
+      <AboutUs />
     </>
   )
 }

@@ -5,8 +5,19 @@ import blog from "./blog";
 import image from "./image";
 import featuredImage from "./featuredPosts";
 import recommended from "./recommened";
+import minimalism from "./minimalism";
+import moreMinimalism from "./moreMinimalism";
+import aboutUs from "./aboutUs";
 
 export default createSchema({
   name: "default",
-  types: schemaTypes.concat([blog, image, featuredImage, recommended]),
+  types: schemaTypes.concat([
+    blog,
+    image,
+    featuredImage,
+    recommended,
+    minimalism,
+    moreMinimalism,
+    aboutUs,
+  ]),
 });

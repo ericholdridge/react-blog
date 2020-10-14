@@ -40,7 +40,7 @@ const StyledRecommended = styled.section`
   width: 100%;
   font-family: "Crimson Pro",sans-serif;
   .container {
-    padding: 0 0 200px 0;
+    padding: 0 0 20px 0;
     .wrap {
       display: flex;
       justify-content: space-between;

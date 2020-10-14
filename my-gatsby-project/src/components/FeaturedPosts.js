@@ -2,8 +2,8 @@ import React from "react";
 import Container from "./ReusableComponents/Container";
 import styled from "styled-components";
 import { StaticQuery } from "gatsby";
-import Img from "gatsby-image";
 import Heading from "./ReusableComponents/Heading";
+import PostCard from "./ReusableComponents/PostCard";
 
 const FeaturedPosts = () => {
   return (
@@ -32,16 +32,12 @@ const FeaturedPosts = () => {
             <Heading title="Features Posts" />
             <div className="posts">
               {data.allSanityFeaturedPosts.nodes.map((post) => (
-                <div className="postsCard">
-                  <Img fixed={post.image.asset.fixed} />
-                  <div className="postDate">
-                    <span>{post.postDate}</span>
-                  </div>
-                  <div>
-                    <h3>{post.imageTitle}</h3>
-                    <p>{post.imageInfo}</p>
-                  </div>
-                </div>
+                <PostCard
+                  img={post.image.asset.fixed}
+                  postDate={post.postDate}
+                  imageTitle={post.imageTitle}
+                  imageInfo={post.imageInfo}
+                />
               ))}
             </div>
           </Container>
