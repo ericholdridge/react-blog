@@ -1,16 +1,16 @@
-import React from "react";
-import Container from "./ReusableComponents/Container";
-import styled from "styled-components";
 import { StaticQuery } from "gatsby";
+import React from "react";
+import styled from "styled-components";
+import Container from "./ReusableComponents/Container";
 import Heading from "./ReusableComponents/Heading";
 import PostCard from "./ReusableComponents/PostCard";
 
-const FeaturedPosts = () => {
+const AllBlogPosts = () => {
   return (
     <StaticQuery
       query={graphql`
-        query MyQuery {
-          allSanityFeaturedPosts {
+        query {
+          blogPosts: allSanityAllBlogPosts {
             nodes {
               image {
                 asset {
@@ -19,19 +19,19 @@ const FeaturedPosts = () => {
                   }
                 }
               }
+              postDate
               imageTitle
               imageInfo
-              postDate
             }
           }
         }
       `}
       render={(data) => (
-        <StyledPosts className="featurePosts">
+        <StyledAllPosts className="allBlogPosts">
           <Container>
-            <Heading title="Features Posts" />
-            <div className="posts">
-              {data.allSanityFeaturedPosts.nodes.map((post) => (
+            <Heading title="All Blog Posts" />
+            <div className="wrapper">
+              {data.blogPosts.nodes.map((post) => (
                 <PostCard
                   img={post.image.asset.fixed}
                   postDate={post.postDate}
@@ -41,23 +41,22 @@ const FeaturedPosts = () => {
               ))}
             </div>
           </Container>
-        </StyledPosts>
+        </StyledAllPosts>
       )}
     />
   );
 };
 
-const StyledPosts = styled.section`
+const StyledAllPosts = styled.section`
   width: 100%;
-  padding: 100px 0;
   .container {
-    .posts {
+    padding: 50px 0 0 0;
+    .wrapper {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      margin: 30px 0 0 0;
     }
   }
 `;
 
-export default FeaturedPosts;
+export default AllBlogPosts;

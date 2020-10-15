@@ -6,6 +6,7 @@ import Hero from "../components/Hero"
 import Recommended from "../components/Recommended"
 import Minimalism from "../components/Minimalism"
 import AboutUs from "../components/AboutUs"
+import AllBlogPosts from "../components/AllBlogPosts"
 
 const IndexPage = () => {
   return (
@@ -22,6 +23,7 @@ const IndexPage = () => {
       <Recommended />
       <Minimalism />
       <AboutUs />
+      <AllBlogPosts />
     </>
   )
 }

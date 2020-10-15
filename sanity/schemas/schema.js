@@ -8,6 +8,7 @@ import recommended from "./recommened";
 import minimalism from "./minimalism";
 import moreMinimalism from "./moreMinimalism";
 import aboutUs from "./aboutUs";
+import allBlogPosts from "./allBlogPosts";
 
 export default createSchema({
   name: "default",
@@ -19,5 +20,6 @@ export default createSchema({
     minimalism,
     moreMinimalism,
     aboutUs,
+    allBlogPosts,
   ]),
 });
