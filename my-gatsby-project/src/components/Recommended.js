@@ -40,14 +40,16 @@ const StyledRecommended = styled.section`
   width: 100%;
   font-family: "Crimson Pro",sans-serif;
   .container {
-    padding: 0 0 20px 0;
+    padding: 0 0 10px 0;
     .wrap {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
       margin-top: 60px;
       .posts {
         width: 100%;
         max-width: 250px;
+        margin: 20px 0 0 0;
         cursor: pointer;
         h3 {
           font-size: 1.4rem;
@@ -67,6 +69,47 @@ const StyledRecommended = styled.section`
           margin: 20px 0 0 0;
           &:hover {
             color: #000;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 833px) {
+    .container {
+      .wrap {
+        .posts {
+          width: 30%;
+          /* border: 1px solid red; */
+          span {
+            margin: 10px 0 0 0;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 750px) {
+    .container {
+      .wrap {
+        .posts {
+          width: 50%;
+          span {
+            margin: 10px 0 0 0;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 610px) {
+    .container {
+      padding: 0;
+      .wrap {
+        flex-direction: column;
+        margin: 10px 0 0 0;
+        .posts {
+          width: 100%;
+          margin: 40px 0 0 0;
+          span {
+            margin: 10px 0 0 0;
           }
         }
       }

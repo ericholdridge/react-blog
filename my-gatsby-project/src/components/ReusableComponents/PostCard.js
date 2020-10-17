@@ -14,7 +14,7 @@ const PostCard = ({ img, postDate, imageTitle, imageInfo }) => (
     <div className="postDate">
       <span>{postDate}</span>
     </div>
-    <div>
+    <div className="imgInfo">
       <h3>{imageTitle}</h3>
       <p>{imageInfo}</p>
     </div>

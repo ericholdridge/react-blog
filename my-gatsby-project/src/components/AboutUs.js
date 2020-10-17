@@ -126,6 +126,52 @@ const StyledAboutUs = styled.section`
       }
     }
   }
+  @media (max-width: 1261px) {
+    .container {
+      .wrapper {
+        .box-1 {
+          max-width: none;
+          width: 60%;
+        }
+      }
+    }
+  }
+  @media (max-width: 1080px) {
+    .container {
+      .wrapper {
+        .box-1 {
+          max-width: none;
+          width: 55%;
+          h3 {
+            font-size: 1.4rem;
+            max-width: 460px;
+            padding: 0 20px 0 0;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 848px) {
+    .container {
+      .wrapper {
+        flex-direction: column;
+        .box-1 {
+          max-width: none;
+          width: 100%;
+          h3 {
+            font-size: 1.4rem;
+            max-width: 460px;
+            padding: 0 20px 0 0;
+          }
+        }
+        .box-2 {
+          .gatsby-image-wrapper {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
 `;
 
 export default AboutUs;

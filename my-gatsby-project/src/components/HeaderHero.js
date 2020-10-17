@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import Container from "./ReusableComponents/Container"
+import React from "react";
+import styled from "styled-components";
+import Container from "./ReusableComponents/Container";
 
 const HeaderHero = () => {
   return (
@@ -23,8 +23,8 @@ const HeaderHero = () => {
         </div>
       </Container>
     </StyledHero>
-  )
-}
+  );
+};
 
 const StyledHero = styled.div`
   width: 100%;
@@ -40,9 +40,9 @@ const StyledHero = styled.div`
         position: relative;
         .line {
           position: absolute;
-          top: 34px;
+          top: 40px;
           right: 0;
-          min-height: 35px;
+          min-height: 28px;
           min-width: 350px;
           background: #faddbd;
           z-index: -1;
@@ -51,7 +51,7 @@ const StyledHero = styled.div`
       }
       h1 {
         font-size: 4.3rem;
-        font-family: 'Crimson Pro', serif;
+        font-family: "Crimson Pro", serif;
       }
     }
     .hero-icons {
@@ -68,7 +68,7 @@ const StyledHero = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: background .4s ease-in-out;
+        transition: background 0.4s ease-in-out;
         cursor: pointer;
         i {
           font-size: 1.1rem;
@@ -79,6 +79,53 @@ const StyledHero = styled.div`
       }
     }
   }
-`
+  @media (max-width: 960px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      .heading {
+        text-align: center;
+      }
+    }
+  }
+  @media (max-width: 960px) {
+    .container {
+      .heading {
+        .headingOne {
+          h1 {
+            font-size: 3.6rem;
+          }
+          .line {
+            min-width: 300px;
+            top: 30px;
+            min-height: 28px;
+          }
+        }
+        h1 {
+          font-size: 3.6rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 561px) {
+    .container {
+      .heading {
+        .headingOne {
+          h1 {
+            font-size: 3rem;
+          }
+          .line {
+            min-width: 250px;
+            top: 26px;
+            min-height: 24px;
+          }
+        }
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+`;
 
-export default HeaderHero
+export default HeaderHero;

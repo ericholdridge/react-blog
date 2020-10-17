@@ -65,6 +65,24 @@ const StyledNewsletter = styled.div`
       }
     }
   }
+  @media (max-width: 1050px) {
+    .container {
+      flex-direction: column;
+      .subscribe {
+        text-align: center;
+        margin: 0 0 40px 0;
+      }
+    }
+  }
+  @media (max-width: 617px) {
+    .container {
+      .subscribe {
+        h3 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
 `;
 
 export default Newsletter;

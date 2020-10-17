@@ -69,11 +69,12 @@ const StyledPost = styled.section`
     .posts {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
     .moreMinimalism {
       width: 100%;
       max-width: 390px;
-      margin: 30px 0 0 0;
+      margin: 50px 0 0 0;
       h3 {
         font-size: 2.1rem;
         font-family: 'Crimson Pro', sans-serif;
@@ -94,6 +95,68 @@ const StyledPost = styled.section`
         h3 {
           font-family: 'Crimson Pro', sans-serif;
           font-size: 1.3rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 1261px) {
+    .container {
+      .posts {
+        .postsCard {
+          width: 48%;
+          .postImage {
+            .gatsby-image-wrapper {
+              width: 100% !important;
+              max-width: none;
+              display: block !important;
+              img {
+                width: 100%;
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 986px) {
+    .container {
+      .posts {
+        .postsCard {
+          width: 48%;
+          .imgInfo {
+            h3 {
+              font-size: 1.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 807px) {
+    .container {
+      .posts {
+        .postsCard {
+          width: 48%;
+          .imgInfo {
+            h3 {
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 730px) {
+    .container {
+      .posts {
+        .postsCard {
+          width: 100%;
+          .imgInfo {
+            h3 {
+              font-size: 1.6rem;
+            }
+          }
         }
       }
     }

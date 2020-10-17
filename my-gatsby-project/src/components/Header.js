@@ -61,6 +61,13 @@ const StyledHeader = styled.header`
       }
     }
   }
+  @media (max-width: 768px) {
+    .container {
+      .items-center, .items-right {
+        display: none;
+      }
+    }
+  }
 `
 
 export default Header

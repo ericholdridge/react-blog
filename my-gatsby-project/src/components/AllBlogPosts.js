@@ -57,6 +57,78 @@ const StyledAllPosts = styled.section`
       flex-wrap: wrap;
     }
   }
+  @media (max-width: 1262px) {
+    .container {
+      padding: 50px 0 0 0;
+      .wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .postsCard {
+          width: 47%;
+          .postImage {
+            .gatsby-image-wrapper {
+              width: 100% !important;
+              max-width: none;
+              display: block !important;
+              img {
+                width: 100%;
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 990px) {
+    .container {
+      .wrapper {
+        .postsCard {
+          .imgInfo {
+            h3 {
+              font-size: 1.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 801px) {
+    .container {
+      .wrapper {
+        .postsCard {
+          .imgInfo {
+            h3 {
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 720px) {
+    .container {
+      .wrapper {
+        flex-direction: column;
+        .postsCard {
+          width: 100%;
+          .postImage {
+            width: 100%;
+            .gatsby-image-wrapper {
+              width: 100% !important;
+              max-width: none;
+              display: block !important;
+              img {
+                width: 100%;
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 `;
 
 export default AllBlogPosts;

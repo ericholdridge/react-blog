@@ -58,6 +58,61 @@ const StyledPosts = styled.section`
       margin: 30px 0 0 0;
     }
   }
+  @media (max-width: 1261px) {
+    .container {
+      .posts {
+        .postsCard {
+          width: 47%;
+          .postImage {
+            .gatsby-image-wrapper {
+              width: 100% !important;
+              max-width: none;
+              display: block !important;
+              img {
+                width: 100%;
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1085px) {
+    .container {
+      .posts {
+        .postsCard {
+          width: 47%;
+          .imgInfo {
+            h3 {
+              font-size: 1.8rem;
+              word-wrap: break-word;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 790px) {
+    .container {
+      .posts {
+        .postsCard {
+          width: 100%;
+          .postImage {
+            .gatsby-image-wrapper {
+              width: 100% !important;
+              max-width: none;
+              display: block !important;
+              img {
+                width: 100%;
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 `;
 
 export default FeaturedPosts;
