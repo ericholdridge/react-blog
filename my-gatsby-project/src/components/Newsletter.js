@@ -62,6 +62,10 @@ const StyledNewsletter = styled.div`
         color: white;
         font-size: .9rem;
         font-weight: 400;
+        cursor: pointer;
+        &:focus {
+          outline: none;
+        }
       }
     }
   }
